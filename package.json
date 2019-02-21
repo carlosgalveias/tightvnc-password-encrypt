@@ -1,0 +1,16 @@
+{
+  "name": "tightvnc-password-encrypt",
+  "version": "1.0.0",
+  "description": "From a plain password generates a TightVNC Server hex encrypted password",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TightVNC",
+    "Encrypt",
+    "Password"
+  ],
+  "author": "Carlos Galveias",
+  "license": "ISC"
+}
