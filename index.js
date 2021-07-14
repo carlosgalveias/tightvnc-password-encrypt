@@ -4,7 +4,7 @@ Carlos Galveias.
 */
 
 /*
-  d3des.c translated to JavaScript 
+  d3des.c translated to JavaScript
   Andrey Sidorov <andrey.sidorov@gmail.com>
 */
 
@@ -67,8 +67,8 @@ var pc2 = [
 
 function deskey(key, edf) {
     var i, j, l, m, n;
-    var pc1m = new Buffer(56);
-    var pcr = new Buffer(56);
+    var pc1m = Buffer.alloc(56);
+    var pcr = Buffer.alloc(56);
     var kn = new Array(32);
 
     for (j = 0; j < 56; j++) {
@@ -401,10 +401,9 @@ function desfunc(block, keys) {
 
 
 module.exports.encrypt = function(password) {
-    var key = new Buffer(8);
-    key.fill(0);
+    var key = Buffer.alloc(8);
     key.write(password.substring(0, 8));
-    var res = new Buffer(8);
+    var res = Buffer.alloc(8);
     deskey(challenge, EN0);
     des(key, res);
     return { buffer: res, string: res.toString('hex') };
